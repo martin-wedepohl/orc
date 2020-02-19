@@ -2,27 +2,32 @@
 # Sidebar
 --------------------------------------------------------------*/
 
+.has-sidebar .site {
+	grid-template-areas: "header" "content" "footer";
+}
+
+.has-sidebar .all-content {
+	grid-area: content;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: "main" "sidebar";
+}
+
 .primary-sidebar {
 	padding: 1.5rem;
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 	max-width: var(--content-width);
-	margin-left: auto;
-	margin-right: auto;
+	grid-area: "sidebar";
+	align-self: center;
+	justify-self: center;
 }
 
-@media (--content-query) {
+@media (--medium-devices) {
 
-	.primary-sidebar {
-		padding-left: 0;
-		padding-right: 0;
+	.has-sidebar .all-content {
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas: "main sidebar";
 	}
 
-}
-
-@media (--sidebar-query) {
-
-	.primary-sidebar {
-		padding: 0;
-	}
 }
