@@ -1,3 +1,68 @@
 /**
  * Custom styles for the front-page.php template.
  */
+
+ .site-header {
+	border-bottom: none;
+}
+
+.site-main {
+	margin-top: 0;
+}
+
+.front-page-cover {
+	min-height: 60vh;
+}
+
+.entry-header,
+.entry-footer {
+	display: none;
+}
+
+.front-page-button {
+	margin: 2em 0;
+}
+
+.front-page-button a {
+	box-shadow: 30px 45px 5px 0px rgba(0,0,0,.5);
+	font-size: 1.2em;
+	font-weight: 700;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.front-page-button a:hover {
+	font-size: 1em;
+	transition: all .1s;
+}
+
+.projects a {
+	background-color: #0007d8;
+}
+
+.contact a {
+	background-color: #61ce70;
+}
+
+.resume a {
+	background-color: #ff0000;
+}
+
+.projects a:hover {
+	background-color: #010694;
+}
+
+.contact a:hover {
+	background-color: #4da058;
+}
+
+.resume a:hover {
+	background-color: #cc0d0d;
+}
+
+@media (--wide-menu-query) {
+
+	.front-page-cover {
+		min-height: 85vh;
+	}
+
+}
